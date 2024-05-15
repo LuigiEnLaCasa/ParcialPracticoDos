@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PacientesModule } from './pacientes/pacientes.module';
+import {provideClientHydration } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -10,9 +11,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PacientesModule
   ],
-  providers: [],
+  providers: [ provideClientHydration()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

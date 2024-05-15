@@ -1,0 +1,9 @@
+<div *ngIf="searchedPaciente" class="card">
+  <div class="card-body">
+    <dt class="bold">{{ searchedPaciente.nombre }}</dt>
+    <hr />
+    <dd class="card-text">Edad: {{searchedPaciente.edad}}</dd>
+    <dd class="card-text">Fecha: {{searchedPaciente.historial[0]}}</dd>
+    <dd class="card-text">Diagnostico: {{searchedPaciente.historial[1]}}</dd>
+  </div>
+</div>
